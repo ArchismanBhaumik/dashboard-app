@@ -5,9 +5,265 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+}
+
+.sidebar{
+background-color: #fff;
+
+padding: 20px;
+  
+box-sizing: border-box;
+
+border-right: 1px solid rgba(28, 28, 28, 0.1);
+}
+.updatebar{
+background-color: #fff;
+
+padding: 20px;
+
+margin-left: 10px;
+  
+box-sizing: border-box;
+
+border-left: 1px solid rgba(28, 28, 28, 0.1);
+}
+
+
+.metric-card {
+  width: 100px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.notifications, .activities, .contacts {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+circle {
+  display: none;
+}
+.recharts-cartesian-grid-vertical{
+  display: none;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Adjust gap between cards */
+}
+
+.metrics > div {
+  flex: 1 1 calc(50% - 20px); /* Two cards per row, with some space */
+  min-width: 200px; /* Optional: ensure the cards do not shrink too much */
+}
+
+.charts {
+  margin-top: 20px;
+}
+.recharts-bar-rectangle{
+  border-radius: 2px;
+}
+.yAxis line{
+  display: none;
+}
+.bar-container{
+background-color:#F5F5F5;
+  width: 400px;
+  border-radius: 15px;
+  padding: 5px;
+}
+.recharts-surface{
+  width:80% !important
+}
+
+.doughnut-chart{
+  margin-left:120px;
+  margin-top: 40px;
+}
+.doughnut-chart-list {
+  margin-top: 10px;
+}
+
+.table-bg-color{
+  background-color:#F5F5F5;
+}
+.bar{
+  border-radius: 15px;
+}
+.pVsa{
+  padding: 15px;
+}
+.bar-color{
+  background-color: #a9c6da80;
+}
+.profile-pic{
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+.favorites{
+color: #1c1c1c;
+font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: center;
+}
+.css-cveggr-MuiListItemIcon-root{
+  min-width: 20px !important;
+}
+.css-1mk9mw3-MuiList-root{
+  padding-left:25px  !important;
+}
+.css-1qa1mqp-MuiListItem-root{
+  padding-left: 0 !important;
+}
+.arrowClass{
+  margin-right: 5px;
+}
+.header-table{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+/* Add other custom styles */
+/* Default Light Mode Styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #fff;
+  --border-color: rgba(28, 28, 28, 0.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-color: #181818;
+  --text-color: #f5f5f5;
+  --card-bg: #2a2a2a;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.sidebar {
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.updatebar {
+  background-color: var(--card-bg);
+  border-left: 1px solid var(--border-color);
+}
+
+.main-content {
+  background-color: var(--background-color);
+}
+
+.button-dark-mode {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  margin-right:200px ;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  color: #F5F5F5;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
