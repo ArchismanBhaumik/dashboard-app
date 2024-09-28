@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
-import Typography from "@mui/material/Typography";
+
 
 const data = [
   { name: "Jan", currentWeek: 12000000, previousWeek: 14000000 },

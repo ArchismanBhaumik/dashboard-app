@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "./components/sidebar";
-import MetricCard from "./components/metricCard";
 import RevenueChart from "./components/revenueLineChart";
 import SalesPieChart from "./components/pieChart";
 import ErrorBoundary from "./components/errorBoundary";
