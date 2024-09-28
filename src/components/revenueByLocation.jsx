@@ -40,7 +40,7 @@ const MapComponent = () => {
         data={chartData}
         options={chartOptions}
       />
-      <div>
+      <div className='mt-5'>
         {chartData.slice(1).map((row) => (
           <div key={row[2]}>
             <p>{row[2]}</p>

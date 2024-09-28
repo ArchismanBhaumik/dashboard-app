@@ -15,7 +15,7 @@ code {
 .dashboard-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 20px;
+  gap:0;
 }
 
 .sidebar{
@@ -39,7 +39,11 @@ box-sizing: border-box;
 border-left: 1px solid rgba(28, 28, 28, 0.1);
 }
 
-
+.growth-card{
+  background-color: var(--Primary-Purple, rgba(229, 236, 246, 1));
+  ;
+  border-radius: 15px;
+}
 .metric-card {
   width: 100px;
   background: #fff;
@@ -100,6 +104,7 @@ background-color:#F5F5F5;
   margin-left:120px;
   margin-top: 40px;
 }
+
 .doughnut-chart-list {
   margin-top: 10px;
 }
@@ -171,15 +176,39 @@ body {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
 }
+.customText{
+  color:#000000!important ;  
+}
+
+.customText-orders{
+  color:#000000 ;
+}
+.customText-orders.dark-mode{
+  color: #ffffff!important ;
+}
+.customText-revenue{
+  color:#000000 ;
+}
+.customText-revenue.dark-mode{
+  color: #ffffff!important ;
+}
+.customText-growth{
+  color:#000000 !important ;
+}
 
 .sidebar {
   background-color: var(--card-bg);
   border-right: 1px solid var(--border-color);
 }
+.customers-card{
+  background-color: #E3F5FF;
+  border-radius: 15px;
+}
 
 .updatebar {
   background-color: var(--card-bg);
   border-left: 1px solid var(--border-color);
+  margin: 0;
 }
 
 .main-content {
@@ -200,7 +229,6 @@ body {
   margin-right:200px ;
   background-color: #2a2a2a;
   border-radius: 10px;
-  color: #F5F5F5;
 }
 
 button {

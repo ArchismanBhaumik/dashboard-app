@@ -21,7 +21,7 @@ const data = [
 
 const ProjectionsVsActualsChart = () => {
   return (
-    <div className='bar-container m-4'>
+    <div className='bar-container m-3 mx-0'>
         <h3 className='pVsa'>Projections VS Actuals</h3>
          <BarChart width={460} height={300} data={data}  barSize={30}>
         <CartesianGrid strokeDasharray="3 3" />
