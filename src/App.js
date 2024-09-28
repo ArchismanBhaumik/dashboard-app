@@ -8,7 +8,7 @@ import ProjectionsVsActualsChart from "./components/projectionVsActuals";
 import arrow from "./assets/Vector.svg";
 import arrowDown from "./assets/arrow.svg";
 import MapComponent from "./components/revenueByLocation";
-import Header from "./components/searchBar";
+// import Header from "./components/searchBar";
 import {
   Chart as ChartJS,
   CategoryScale, // Register this for x-axis (category)
