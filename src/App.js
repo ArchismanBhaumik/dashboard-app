@@ -89,10 +89,7 @@ const App = () => {
         <Sidebar className="sidebar" />
         <div className="main-content">
           <Header toggleDarkMode={toggleDarkMode} />
-
-          {/* Define routes here */}
           <Routes>
-            {/* Main dashboard content route */}
             <Route
               path="/"
               element={
@@ -116,7 +113,7 @@ const App = () => {
                             </div>
                           </div>
                           <div className="col-md-6 px-0 mx-0 border-3">
-                            <div className="card m-1">
+                            <div className="card-rev m-1">
                               <div className="card-body p-4">
                                 <h5 className="customText-orders">Orders</h5>
                                 <div className=" d-flex justify-content-between">
@@ -129,7 +126,7 @@ const App = () => {
                             </div>
                           </div>
                           <div className="col-md-6 px-0 mx-0 border-3">
-                            <div className="card m-1">
+                            <div className="card-rev m-1">
                               <div className="card-body p-4">
                                 <h5 className="customText-revenue">Revenue</h5>
                                 <div className=" d-flex justify-content-between">
@@ -181,8 +178,6 @@ const App = () => {
                 </>
               }
             />
-            
-            {/* OrderList route */}
             <Route path="/orders" element={<OrderList />} />
           </Routes>
         </div>
