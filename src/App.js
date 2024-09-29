@@ -66,6 +66,7 @@ const App = () => {
         <Sidebar className="sidebar" />
         <div className="main-content">
         <Header toggleDarkMode={toggleDarkMode} />
+        <div><h3 className="m-2">eCommerce</h3></div>
           <div>
             <div className="row p-3">
               <div className="col-md-7 pt-3">
