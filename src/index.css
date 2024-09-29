@@ -17,6 +17,11 @@ code {
   grid-template-columns: 1fr 4fr;
   gap:0;
 }
+.css-1l3b84d{
+  padding: 5px !important;
+  margin-top: 5px;
+  margin-left: 0 !important;
+}
 
 .sidebar{
 background-color: #fff;
