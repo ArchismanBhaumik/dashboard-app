@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { useNavigate } from "react-router-dom";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import bug from "../assets/bug.svg"
@@ -99,12 +97,6 @@ const sidebarData = {
 
 
 const UpdateBar = () => {
-    const navigate = useNavigate(); // useNavigate hook for navigation
-
-  // Function to handle navigation when "Contacts" header is clicked
-  const handleContactsClick = () => {
-    navigate('/orders'); // Navigate to the "/orders" route
-  };
   return (
     <div className='updatebar'>
       <h5>Notifications</h5>
@@ -130,7 +122,7 @@ const UpdateBar = () => {
         ))}
       </List>
       <Divider />
-      <h5 onClick={handleContactsClick} style={{ cursor: 'pointer' }}>Contacts</h5>
+      <h5 >Contacts</h5>
       <List>
         {sidebarData.contacts.map((contact) => (
           <ListItem key={contact.name}>

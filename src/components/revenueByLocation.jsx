@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
 
-const MapComponent = () => {
+const MapComponent = ({ darkMode }) => {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
@@ -25,6 +25,7 @@ const MapComponent = () => {
     mapType: 'normal',
     zoomLevel: 1,
     legend: { position: 'bottom' },
+    backgroundColor: darkMode ? '#2a2a2a' : '#ffffff', // Apply dark background in dark mode
     colorAxis: {
       colors: ['#f1c40f', '#0087ca'],
       minValue: 0,
@@ -34,13 +35,21 @@ const MapComponent = () => {
   };
 
   return (
-    <div>
-      <Chart
-        chartType="GeoChart"
-        data={chartData}
-        options={chartOptions}
-      />
-      <div className='mt-5'>
+    <div
+      className={`map-container ${darkMode ? 'dark-mode-map' : 'light-mode-map'}`}
+      style={{
+        height: '350px', // Match the height of the line chart
+        padding: '20px',
+        boxSizing: 'border-box',
+        width:'200px'
+      }}
+    >
+      {/* Add the h4 title */}
+      <h5 className={`${darkMode ? 'dark-mode-text' : 'light-mode-text'}`} >
+        Revenue By Location
+      </h5>
+      <Chart chartType="GeoChart" data={chartData} options={chartOptions}/>
+      <div className="">
         {chartData.slice(1).map((row) => (
           <div key={row[2]}>
             <p>{row[2]}</p>

@@ -8,13 +8,13 @@ import clock  from "../assets/clock.svg"
 const Header = ({toggleDarkMode}) => {
 
     const searBarStyle = {
-        'padding-left':'400px'
+        'padding-left':'40%'
     }
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid justify-content-between ">
             <div>
                 <img src={sidebarSearch}alt="" />
                 <img src={star} alt="" className="m-3"/>

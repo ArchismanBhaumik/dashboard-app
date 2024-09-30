@@ -5,6 +5,8 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/system';
 import c1 from "../assets/c1.svg";
 import c2 from "../assets/c2.svg";
@@ -17,7 +19,7 @@ import c6 from "../assets/c6.svg";
 const orders = [
   { id: '#CM9801', user: 'Natalie Craig', project: 'Landing Page', address: 'Meadow Lane Oakland', date: 'Just now', status: 'In Progress', avatar: c1 },
   { id: '#CM9802', user: 'Kate Morrison', project: 'CRM Admin pages', address: 'Larry San Francisco', date: 'A minute ago', status: 'Complete', avatar: c2 },
-  { id: '#CM9803', user: 'Drew Cono', project: 'Client Project', address: 'Bagwell Avenue Oslo', date: '1 hour ago', status: 'Pending', avatar: c2},
+  { id: '#CM9803', user: 'Drew Cono', project: 'Client Project', address: 'Bagwell Avenue Oslo', date: '1 hour ago', status: 'Pending', avatar: c3 },
   { id: '#CM9804', user: 'Orlando Diggs', project: 'Admin Dashboard', address: 'Washburn Baton Rouge', date: 'Yesterday', status: 'Approved', avatar: c4 },
   { id: '#CM9805', user: 'Antil Lane', project: 'App Landing Page', address: 'Nest Lane Olivette', date: 'Feb 2, 2023', status: 'Rejected', avatar: c5 }
 ];
@@ -62,16 +64,28 @@ const OrderList = ({ darkMode }) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/');
+  };
 
   return (
     <Paper 
       sx={{ 
         backgroundColor: darkMode ? '#333' : '#fff', 
         color: darkMode ? '#fff' : '#000', 
-        boxShadow: darkMode ? '0px 4px 10px rgba(0, 0, 0, 0.7)' : '0px 4px 10px rgba(0, 0, 0, 0.1)' 
+        boxShadow: darkMode ? '0px 4px 10px rgba(0, 0, 0, 0.7)' : '0px 4px 10px rgba(0, 0, 0, 0.1)', 
+        marginLeft:'5px',
+        marginRight:'5px'
       }}
     >
-      {/* Search Bar */}
+      <div className="d-flex align-items-center m-2 justify-content-between">
+        <span className="fs-4">Order List</span>
+        <button onClick={handleBackClick} className="btn btn-secondary me-2">
+          Back
+        </button>
+      </div>
       <SearchContainer 
         sx={{ 
           backgroundColor: darkMode ? '#444' : '#f5f5f5', 
@@ -86,7 +100,6 @@ const OrderList = ({ darkMode }) => {
         />
       </SearchContainer>
 
-      {/* Table */}
       <TableContainer>
         <Table>
           <TableHead>

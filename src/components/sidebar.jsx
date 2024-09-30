@@ -57,7 +57,6 @@ const Sidebar = () => {
     display: "flex",
     alignItems: "center",
     marginBottom: "10px",
-    color: "black", // Black color for list text
     fontSize: "16px",
   };
 
