@@ -149,7 +149,7 @@ const App = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="charts d-flex">
+                    <div className="charts d-flex m-5">
                       <RevenueChart />
                       <div className="map-box">
                         <MapComponent darkMode={darkMode} />

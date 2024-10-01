@@ -4,12 +4,24 @@ import sidebarSearch from "../assets/sidebarSearch.svg";
 import star from "../assets/star.svg"
 import bell from "../assets/bell.svg"
 import clock  from "../assets/clock.svg"
+import { useLocation } from 'react-router-dom';
+
 
 const Header = ({toggleDarkMode}) => {
 
     const searBarStyle = {
         'padding-left':'40%'
     }
+  const location = useLocation();
+
+  const getPaddingStyle = () => {
+    if (location.pathname === '/') {
+      return { paddingLeft: '40%' };
+    } else if (location.pathname === '/orders') {
+      return { paddingLeft: '55%' };
+    }
+    return {}; 
+  };
 
   return (
     <div>
@@ -21,7 +33,7 @@ const Header = ({toggleDarkMode}) => {
                 <span className="text-secondary">Dashboard /</span>
                 <span className="text-dark">Default</span>
             </div>
-          <div class="collapse navbar-collapse " style={searBarStyle} id="navbarScroll">
+          <div class="collapse navbar-collapse " style={getPaddingStyle()} id="navbarScroll">
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"

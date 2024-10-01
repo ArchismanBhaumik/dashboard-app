@@ -43,7 +43,14 @@ export default function ProductTable({ darkMode }) {
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <TableRow key={row.name}>
+              <TableRow key={row.name}
+              sx={{
+                '&:hover': {
+                  backgroundColor: darkMode ? '#424242' : '#f5f5f5', // Change the color on hover based on theme
+                  cursor: 'pointer',
+                },
+              }}
+              >
                 <TableCell component="th" scope="row">{row.name}</TableCell>
                 <TableCell align="right">{row.price}</TableCell>
                 <TableCell align="right">{row.quantity}</TableCell>
