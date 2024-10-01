@@ -38,7 +38,7 @@ ChartJS.register(
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
     // Check if dark mode was previously enabled
     const savedMode = localStorage.getItem("darkMode");
@@ -49,6 +49,7 @@ const App = () => {
   }, []);
 
   const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
     setDarkMode((prevMode) => {
       const newMode = !prevMode;
       document.body.classList.toggle("dark-mode", newMode);
@@ -73,7 +74,7 @@ const App = () => {
         <ErrorBoundary>
           <Sidebar className="sidebar" />
           <div className="main-content">
-            <Header toggleDarkMode={toggleDarkMode} />
+            <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
             <Routes>
               <Route
                 path="/"

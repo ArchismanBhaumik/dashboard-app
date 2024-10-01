@@ -76,8 +76,6 @@ const OrderList = ({ darkMode }) => {
         backgroundColor: darkMode ? '#333' : '#fff', 
         color: darkMode ? '#fff' : '#000', 
         boxShadow: darkMode ? '0px 4px 10px rgba(0, 0, 0, 0.7)' : '0px 4px 10px rgba(0, 0, 0, 0.1)', 
-        marginLeft:'5px',
-        marginRight:'5px'
       }}
     >
       <div className="d-flex align-items-center m-2 justify-content-between">

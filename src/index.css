@@ -273,7 +273,7 @@ body {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 88%;
 }
 
 .button-dark-mode {
