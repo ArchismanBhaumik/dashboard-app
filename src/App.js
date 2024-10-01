@@ -39,7 +39,6 @@ ChartJS.register(
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
-    // Check if dark mode was previously enabled
     const savedMode = localStorage.getItem("darkMode");
     if (savedMode) {
       setDarkMode(savedMode === "true");
@@ -52,7 +51,6 @@ const App = () => {
       const newMode = !prevMode;
       document.body.classList.toggle("dark-mode", newMode);
 
-      // Update UI elements with dark mode class toggles
       const customTextOrder = document.getElementsByClassName("customText-orders");
       const customTextRevenue = document.getElementsByClassName("customText-revenue");
       const customTextGrowth = document.getElementsByClassName("customText-growth");

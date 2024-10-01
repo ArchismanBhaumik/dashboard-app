@@ -13,7 +13,7 @@ const data = {
 const options = {
     plugins: {
       legend: {
-        display: false, // Show the legend
+        display: false, 
       },
       tooltip: {
         callbacks: {
@@ -25,7 +25,7 @@ const options = {
         }
       }
     },
-    cutout: '50%' // Create a donut chart with a hole in the middle
+    cutout: '50%' 
   };
 
 const SalesPieChart = () => {

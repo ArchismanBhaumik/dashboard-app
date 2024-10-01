@@ -19,7 +19,6 @@ const data = [
 ];
 
 const ChartComponent = () => {
-  // Calculate total revenue for current and previous weeks
   const totalCurrentWeek = data.reduce(
     (acc, item) => acc + item.currentWeek,
     0

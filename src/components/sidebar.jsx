@@ -36,7 +36,7 @@ const Sidebar = () => {
     display: "flex",
     justifyContent: "space-between",
     marginBottom: "10px",
-    color: "#b0b0b0", // Gray color for tabs
+    color: "#b0b0b0", 
     fontWeight: "normal",
     fontSize: "14px",
   };
@@ -63,7 +63,7 @@ const Sidebar = () => {
   const bulletStyle = {
     height: "8px",
     width: "8px",
-    backgroundColor: "#b0b0b0", // Gray bullet point
+    backgroundColor: "#b0b0b0", 
     borderRadius: "50%",
     display: "inline-block",
     marginRight: "10px",
@@ -71,17 +71,15 @@ const Sidebar = () => {
 
   const activeListItemStyle = {
     ...listItemStyle,
-    backgroundColor: "#f0f0f0", // Light background for active item
+    backgroundColor: "#f0f0f0",
   };
 
-  // Icon style (for the left icons)
   const iconStyle = {
     width: "20px",
     height: "20px",
     marginRight: "10px",
   };
 
-  // Arrow style (optional, for collapsibility indicator)
   const arrowStyle = {
     marginLeft: "auto",
     color: "#b0b0b0",

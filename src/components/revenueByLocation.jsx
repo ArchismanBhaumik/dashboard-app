@@ -25,7 +25,7 @@ const MapComponent = ({ darkMode }) => {
     mapType: 'normal',
     zoomLevel: 1,
     legend: { position: 'bottom' },
-    backgroundColor: darkMode ? '#2a2a2a' : '#ffffff', // Apply dark background in dark mode
+    backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
     colorAxis: {
       colors: ['#f1c40f', '#0087ca'],
       minValue: 0,
@@ -38,7 +38,7 @@ const MapComponent = ({ darkMode }) => {
     <div
       className={`map-container ${darkMode ? 'dark-mode-map' : 'light-mode-map'}`}
       style={{
-        height: '350px', // Match the height of the line chart
+        height: '350px',
         padding: '20px',
         boxSizing: 'border-box',
         width:'200px'

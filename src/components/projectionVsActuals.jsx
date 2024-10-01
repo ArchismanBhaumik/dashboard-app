@@ -28,7 +28,6 @@ const ProjectionsVsActualsChart = () => {
         <XAxis dataKey="month" />
         <YAxis tickFormatter={(value) => `${value / 1000000}M`} />
         <Tooltip />
-        {/* Use the same stackId to merge/stack the bars */}
         <Bar dataKey="projection" fill="#A8C5DA" name="Projection" stackId="a"  />
         <Bar dataKey="actual" fill="#a9c6da80" name="Actual" stackId="a" radius={[10, 10, 0, 0]} />
       </BarChart>

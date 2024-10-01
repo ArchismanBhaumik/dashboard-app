@@ -15,7 +15,6 @@ import c4 from "../assets/c4.svg";
 import c5 from "../assets/c5.svg";
 import c6 from "../assets/c6.svg";
 
-// Orders Data
 const orders = [
   { id: '#CM9801', user: 'Natalie Craig', project: 'Landing Page', address: 'Meadow Lane Oakland', date: 'Just now', status: 'In Progress', avatar: c1 },
   { id: '#CM9802', user: 'Kate Morrison', project: 'CRM Admin pages', address: 'Larry San Francisco', date: 'A minute ago', status: 'Complete', avatar: c2 },
@@ -24,7 +23,7 @@ const orders = [
   { id: '#CM9805', user: 'Antil Lane', project: 'App Landing Page', address: 'Nest Lane Olivette', date: 'Feb 2, 2023', status: 'Rejected', avatar: c5 }
 ];
 
-// Status Color Mapping
+
 const statusColors = {
   'In Progress': 'primary',
   'Complete': 'success',
@@ -33,7 +32,6 @@ const statusColors = {
   'Rejected': 'error'
 };
 
-// Styled Components for Search Container
 const SearchContainer = styled('div')(({ theme }) => ({
   position: 'relative',
   display: 'flex',
@@ -51,7 +49,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   flex: 1,
 }));
 
-// Main OrderList Component with Dark Mode Support
 const OrderList = ({ darkMode }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);

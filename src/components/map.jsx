@@ -14,7 +14,6 @@ const MapComponent = () => {
 
   useEffect(() => {
     if (map) {
-      // Add markers for each location
       locations.forEach((item) => {
         const marker = new L.Marker([item.latitude, item.longitude]).addTo(map);
         marker.bindPopup(`<p>${item.location}</p>`);
@@ -28,7 +27,6 @@ const MapComponent = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      {/* Markers will be added here */}
     </MapContainer>
   );
 };

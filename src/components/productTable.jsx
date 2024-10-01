@@ -46,7 +46,7 @@ export default function ProductTable({ darkMode }) {
               <TableRow key={row.name}
               sx={{
                 '&:hover': {
-                  backgroundColor: darkMode ? '#424242' : '#f5f5f5', // Change the color on hover based on theme
+                  backgroundColor: darkMode ? '#424242' : '#f5f5f5', 
                   cursor: 'pointer',
                 },
               }}

@@ -41,7 +41,7 @@ const sidebarData = {
         timestamp: 'Today, 11:59 PM',
         img:broadcast
       },
-    // ... other notifications
+  
   ],
   activities: [
     {
@@ -65,7 +65,7 @@ const sidebarData = {
         img:boy4
       },
    
-    // ... other activities
+    
   ],
   contacts: [
     {
@@ -92,7 +92,7 @@ const sidebarData = {
         name:'Koray Okumos',
         img:c6
     }
-    // ... other contacts
+ 
   ],
 };
 
